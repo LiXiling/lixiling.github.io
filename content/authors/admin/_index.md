@@ -117,5 +117,5 @@ social:
 highlight_name: true
 ---
 
-Maximilian Xiling Li is a PhD Researcher at the Intuitive Robots Lab under supervision of [TT.-Prof. Rudolf Lioutikov](https://rudolf.intuitive-robots.net/). His Research interests revolve around explainable artifical intelligence (XAI) for robotics. His works aims at making the decision processes of embodied transparent to improve human robot interaction and enhance its safety.
+Maximilian Xiling Li is a PhD Researcher at the Intuitive Robots Lab under supervision of [TT.-Prof. Rudolf Lioutikov](https://rudolf.intuitive-robots.net/). Max's Research interests revolve around explainable artifical intelligence (XAI) for robotics. His works aims at making the decision processes of embodied AI transparent to improve human robot interaction and enhance its safety.
 {style="text-align: justify;"}
