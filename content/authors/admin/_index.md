@@ -24,8 +24,25 @@ organizations:
   - name: Intuitive Robots Lab, KIT, Germany
     url: https://www.irl.iar.kit.edu/
 
-# Short bio (displayed in user profile at end of posts)
-bio: My research interests include XAI and Computer Vision for intuitive Robotics.
+# Social network links
+# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
+profiles:
+#  - icon: at-symbol
+#    url: 'mailto:your-email@example.com'
+#    label: E-mail Me
+#  - icon: brands/x
+#    url: https://twitter.com/GetResearchDev
+#  - icon: brands/instagram
+#    url: https://www.instagram.com/
+  - icon: brands/github
+    url: https://github.com/LiXiling
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/lixiling/
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=N8vw1IAAAAAJ
+#  - icon: academicons/orcid
+#    url: https://orcid.org/
+
 
 # Interests to show in About widget
 interests:
@@ -115,6 +132,7 @@ social:
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
+
 ---
 
 Maximilian Xiling Li is a PhD Researcher at the [Intuitive Robots Lab](https://www.irl.iar.kit.edu/) under supervision of [TT.-Prof. Rudolf Lioutikov](https://rudolf.intuitive-robots.net/). Max's Research interests revolve around explainable artifical intelligence (XAI) for robotics. His works aims at making the decision processes of embodied AI transparent to improve human robot interaction and enhance its safety.
