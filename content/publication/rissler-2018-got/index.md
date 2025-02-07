@@ -7,7 +7,7 @@ authors:
 - Michael Thomas Knierim
 - Alexander Maedche
 date: '2018-01-01'
-publishDate: '2024-02-03T09:59:21.645187Z'
+publishDate: '2025-02-07T10:08:07.001124Z'
 publication_types:
 - paper-conference
 publication: '*Extended abstracts of the 2018 CHI conference on human factors in computing

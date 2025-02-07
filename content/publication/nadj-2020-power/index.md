@@ -7,7 +7,7 @@ authors:
 - Maximilian Xiling Li
 - Alexander Maedche
 date: '2020-01-01'
-publishDate: '2024-02-03T09:59:21.631410Z'
+publishDate: '2025-02-07T10:08:06.996814Z'
 publication_types:
 - article-journal
 publication: '*KI-Künstliche Intelligenz*'

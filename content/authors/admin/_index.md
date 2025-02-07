@@ -97,8 +97,8 @@ social:
   #   label: Follow me on Twitter
   #   display:
   #     header: true
-  - icon: graduation-cap # Alternatively, use `google-scholar` icon from `ai` icon pack
-    icon_pack: fas
+  - icon: google-scholar # Alternatively, use `google-scholar` icon from `ai` icon pack
+    icon_pack: ai
     link: https://scholar.google.com/citations?user=N8vw1IAAAAAJ
   - icon: github
     icon_pack: fab
@@ -117,5 +117,7 @@ social:
 highlight_name: true
 ---
 
-Maximilian Xiling Li is a PhD Researcher at the Intuitive Robots Lab under supervision of [TT.-Prof. Rudolf Lioutikov](https://rudolf.intuitive-robots.net/). Max's Research interests revolve around explainable artifical intelligence (XAI) for robotics. His works aims at making the decision processes of embodied AI transparent to improve human robot interaction and enhance its safety.
+Maximilian Xiling Li is a PhD Researcher at the [Intuitive Robots Lab](https://www.irl.iar.kit.edu/) under supervision of [TT.-Prof. Rudolf Lioutikov](https://rudolf.intuitive-robots.net/). Max's Research interests revolve around explainable artifical intelligence (XAI) for robotics. His works aims at making the decision processes of embodied AI transparent to improve human robot interaction and enhance its safety.
+
+Previously Max was a Research Assistant at the [Autonomous Learning Robots](https://www.alr.iar.kit.edu/) group and the Human-Centered Systems Lab at KIT. Before he joined KIT as a Master's Student, Max was part of a research team at SAP as a working student.
 {style="text-align: justify;"}

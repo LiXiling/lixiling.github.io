@@ -9,7 +9,7 @@ authors:
 - Michael T Knierim
 - Alexander Maedche
 date: '2020-01-01'
-publishDate: '2024-02-03T09:59:21.657285Z'
+publishDate: '2025-02-07T10:08:07.007366Z'
 publication_types:
 - article-journal
 publication: '*IEEE transactions on affective computing*'
