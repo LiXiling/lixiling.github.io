@@ -4,8 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Stack
 
-Plain HTML + CSS static site. No build step, no framework, no JavaScript.
-Deployed to GitHub Pages via GitHub Actions on push to `main`.
+HTML + Bulma CSS framework (loaded from CDN) + minimal vanilla JS (navbar burger only).
+No build step. Deployed to GitHub Pages via GitHub Actions on push to `main`.
+Font Awesome icons loaded from CDN.
 
 ## Version Control
 
@@ -42,14 +43,15 @@ To add a new post: create `posts/your-slug.html`, copy the nav/footer from anoth
 
 ## Design System (style.css)
 
-CSS custom properties defined in `:root`:
-- `--accent: #4338ca` — indigo, used for links and chips
-- `--accent-light: #eef2ff` — chip backgrounds
-- `--muted: #6b7280` — secondary text, labels
-- `--border: #f3f4f6` — section dividers
-- `--max-width: 740px` — content column width
+Built on Bulma with custom overrides. CSS custom properties in `:root`:
+- `--accent: #506bf0` — primary blue, used for links, buttons, headings
+- `--accent-light: #eef2ff` — tag/chip backgrounds
+- `--text-primary / --text-secondary` — text colors
+- `--bg-subtle / --border-light` — backgrounds and dividers
 
-Key classes: `.pub-list`, `.pub-links`, `.post-list`, `.tags`, `.profile-header`, `.site-nav`
+Key custom classes: `.section-card`, `.section-heading`, `.pub-entry`, `.pub-links`, `.post-entry`, `.profile-hero`, `.research-tags`
+Bulma classes used throughout: `.navbar`, `.hero`, `.container`, `.columns`, `.button`, `.tag`, `.footer`
+Dark mode supported via `prefers-color-scheme: dark`.
 
 ## Deployment
 

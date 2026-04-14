@@ -18,88 +18,119 @@
   <link rel="canonical" href="https://lixiling.github.io/posts/[post-slug].html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="../icon.png" type="image/jpeg">
   <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
 
-  <nav class="site-nav">
-    <a href="../index.html" class="site-name">Maximilian Xiling Li</a>
-    <div class="nav-links">
-      <a href="../index.html">About</a>
-      <a href="../publications.html">Publications</a>
-      <a href="../posts.html" class="active">Posts</a>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item site-name" href="../index.html">Maximilian Xiling Li</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNav" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item nav-link" href="../index.html">About</a>
+          <a class="navbar-item nav-link" href="../publications.html">Publications</a>
+          <a class="navbar-item nav-link is-active" href="../posts.html">Posts</a>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <main>
-    <a href="../posts.html" class="post-back">← Posts</a>
+  <section class="section content-section">
+    <div class="container">
+      <a href="../posts.html" class="post-back">&larr; Posts</a>
 
-    <article>
-      <header class="post-header">
-        <h1>[Post Title]</h1>
-        <p class="post-meta">
-          <time datetime="2026-03">March 2026</time>
-          &nbsp;·&nbsp;
-          <span>[tag]</span>
-          &nbsp;·&nbsp;
-          <span>[tag]</span>
-        </p>
-      </header>
+      <article>
+        <header class="post-header">
+          <h1>[Post Title]</h1>
+          <p class="post-meta">
+            <time datetime="2026-03">March 2026</time>
+            &nbsp;&middot;&nbsp;
+            <span class="tag is-light is-link is-small">[tag]</span>
+            &nbsp;
+            <span class="tag is-light is-link is-small">[tag]</span>
+          </p>
+        </header>
 
-      <div class="post-body">
-        <p>
-          [Opening paragraph. Set the scene — what problem prompted this post, or what
-          you learned that's worth writing down.]
-        </p>
+        <div class="post-body">
+          <p>
+            [Opening paragraph. Set the scene — what problem prompted this post, or what
+            you learned that's worth writing down.]
+          </p>
 
-        <h2>[First section heading]</h2>
-        <p>
-          [Body paragraph. Keep it concrete. Link to relevant papers or tools where
-          useful.]
-        </p>
-        <p>
-          [Another paragraph. If you're explaining a setup or workflow, step through it
-          sequentially.]
-        </p>
+          <h2>[First section heading]</h2>
+          <p>
+            [Body paragraph. Keep it concrete. Link to relevant papers or tools where
+            useful.]
+          </p>
+          <p>
+            [Another paragraph. If you're explaining a setup or workflow, step through it
+            sequentially.]
+          </p>
 
-        <h2>[Second section heading]</h2>
-        <p>
-          [Body paragraph. Use <code>inline code</code> for commands, variable names,
-          or short snippets.]
-        </p>
+          <h2>[Second section heading]</h2>
+          <p>
+            [Body paragraph. Use <code>inline code</code> for commands, variable names,
+            or short snippets.]
+          </p>
 
-        <!-- Example code block — remove if not needed -->
-        <pre><code>[$ example command or code snippet]</code></pre>
+          <!-- Example code block — remove if not needed -->
+          <pre><code>[$ example command or code snippet]</code></pre>
 
-        <p>
-          [Explain what the snippet does, what to watch out for, or what the output
-          should look like.]
-        </p>
+          <p>
+            [Explain what the snippet does, what to watch out for, or what the output
+            should look like.]
+          </p>
 
-        <h2>Conclusion</h2>
-        <p>
-          [Wrap up with the key takeaway in one or two sentences. Optionally mention
-          what you're looking at next.]
-        </p>
+          <h2>Conclusion</h2>
+          <p>
+            [Wrap up with the key takeaway in one or two sentences. Optionally mention
+            what you're looking at next.]
+          </p>
 
-        <!-- Optional: further reading -->
-        <!--
-        <h2>Further reading</h2>
-        <ul>
-          <li><a href="#">[Paper or resource title]</a></li>
-          <li><a href="#">[Paper or resource title]</a></li>
-        </ul>
-        -->
-      </div>
-    </article>
-  </main>
+          <!-- Optional: further reading -->
+          <!--
+          <h2>Further reading</h2>
+          <ul>
+            <li><a href="#">[Paper or resource title]</a></li>
+            <li><a href="#">[Paper or resource title]</a></li>
+          </ul>
+          -->
+        </div>
+      </article>
+    </div>
+  </section>
 
-  <footer>
-    <p>Maximilian Xiling Li · <a href="mailto:maximilian.li@kit.edu">maximilian.li@kit.edu</a></p>
+  <footer class="footer">
+    <div class="container">
+      <p class="has-text-centered">Maximilian Xiling Li · <a
+          href="mailto:maximilian.li@kit.edu">maximilian.li@kit.edu</a></p>
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
 
 </body>
 

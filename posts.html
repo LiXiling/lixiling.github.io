@@ -18,50 +18,81 @@
   <link rel="canonical" href="https://lixiling.github.io/posts.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" href="icon.png" type="image/jpeg">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <nav class="site-nav">
-    <a href="index.html" class="site-name">Maximilian Xiling Li</a>
-    <div class="nav-links">
-      <a href="index.html">About</a>
-      <a href="publications.html">Publications</a>
-      <a href="posts.html" class="active">Posts</a>
+  <!-- Navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item site-name" href="index.html">Maximilian Xiling Li</a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNav" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item nav-link" href="index.html">About</a>
+          <a class="navbar-item nav-link" href="publications.html">Publications</a>
+          <a class="navbar-item nav-link is-active" href="posts.html">Posts</a>
+        </div>
+      </div>
     </div>
   </nav>
 
-  <main>
-    <h1 class="page-title">Posts</h1>
+  <section class="section content-section">
+    <div class="container">
+      <h1 class="page-title">Posts</h1>
 
-    <section>
-      <h2>2026</h2>
-      <ul class="post-list">
-        <!-- <li>
+      <div class="section-card">
+        <h2 class="section-heading">2026</h2>
+
+        <!-- <div class="post-entry">
           <span class="post-date">Mar 2026</span>
           <div class="post-info">
-            <a href="posts/first-post.html" class="post-title">[Post Title]</a>
+            <a href="posts/first-post.html" class="post-title-link">[Post Title]</a>
             <span class="post-desc">[One-line description of what the post covers.]</span>
           </div>
-        </li> -->
-        <li>
+        </div> -->
+
+        <div class="post-entry">
           <span class="post-date">Coming Soon</span>
           <div class="post-info">
             Under Construction
             <span class="post-desc"></span>
           </div>
-        </li>
-      </ul>
-    </section>
+        </div>
+      </div>
 
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>Maximilian Xiling Li · <a href="mailto:maximilian.li@kit.edu">maximilian.li@kit.edu</a></p>
+  <footer class="footer">
+    <div class="container">
+      <p class="has-text-centered">Maximilian Xiling Li · <a
+          href="mailto:maximilian.li@kit.edu">maximilian.li@kit.edu</a></p>
+    </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burger = document.querySelector('.navbar-burger');
+      const menu = document.getElementById(burger.dataset.target);
+      burger.addEventListener('click', () => {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    });
+  </script>
 
 </body>
 
