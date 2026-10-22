@@ -1,1 +1,3 @@
 build/
+# Generated from ../publications.html by gen_pubs.py
+pubs.tex

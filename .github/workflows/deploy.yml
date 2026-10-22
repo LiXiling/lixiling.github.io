@@ -27,10 +27,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Publish only the site: no CV sources, fonts or repo notes, just the CV PDFs.
+      - name: Assemble site
+        run: |
+          rsync -a --exclude '.git*' --exclude '.github' --exclude 'CLAUDE.md' --exclude 'cv/' --exclude '_site' ./ _site/
+          mkdir -p _site/cv
+          cp cv/*.pdf _site/cv/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
 
       - name: Deploy to GitHub Pages
         id: deployment

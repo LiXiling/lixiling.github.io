@@ -2,13 +2,7 @@
 .idea/
 .vscode/
 
-# Hugo
-resources/
-public/
-jsconfig.json
-node_modules/
-go.sum
-.hugo_build.lock
+# Reference checkout of the lab website (local only)
 irl-website-main
 
 # Original portrait; the site uses the compressed photo.jpg
