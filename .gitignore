@@ -10,3 +10,6 @@ node_modules/
 go.sum
 .hugo_build.lock
 irl-website-main
+
+# Original portrait; the site uses the compressed photo.jpg
+photo.png
