@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lixiling.github.io/sitemap.xml

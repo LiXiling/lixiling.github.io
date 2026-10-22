@@ -357,9 +357,15 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
 .course h3 { margin: 0; }
 .course p { color: var(--muted); font-size: 0.9rem; margin: 0; }
 .theses .rows em a { color: var(--accent); }
-.sheet.outside { margin-top: 1.1rem; display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.5rem 1.5rem; align-items: baseline; padding-block: 1.1rem; }
-.sheet.outside > h3 { margin: 0; padding: 0; border: 0; }
-.sheet.outside p { color: var(--muted); font-size: 0.95rem; }
+.sheet.extras { margin-top: 1.1rem; padding-block: 0.3rem; }
+.extras > div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.35rem 1.5rem; align-items: baseline; padding-block: 0.85rem; }
+.extras > div + div { border-top: 1px solid var(--line); }
+.extras dt { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
+.extras dd { color: var(--muted); font-size: 0.95rem; }
+.tools li { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 0 1rem; padding-block: 0.1rem; }
+.tools li span { color: var(--faint); font-size: 0.85rem; }
+.tools em { color: var(--text); font-style: normal; font-weight: 500; }
+@media (max-width: 600px) { .tools li { grid-template-columns: 1fr; padding-block: 0.25rem; } }
 
 /* ── Page header (inner pages) ── */
 .page-head { border-bottom: 1px solid var(--line); background:
@@ -428,7 +434,7 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
 @media (max-width: 900px) {
   .intro-inner { grid-template-columns: 1fr; }
   .portrait { justify-self: start; max-width: 220px; order: -1; }
-  .themes, .split, .feature, .course-grid, .sheet.outside { grid-template-columns: 1fr; }
+  .themes, .split, .feature, .course-grid, .extras > div { grid-template-columns: 1fr; }
   .year-block { grid-template-columns: 1fr; gap: 0.6rem; }
   .year-block > h2 { position: static; padding-top: 0.7rem; }
 }
