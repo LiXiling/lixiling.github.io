@@ -33,12 +33,14 @@ python3 -m http.server
 index.html          — Home page (bio, research interests, contact)
 publications.html   — Full publications list (grouped by year)
 style.css           — All shared styles (single file)
-main.js             — All shared behaviour (single file, loaded with defer)
+main.js             — All shared behavior (single file, loaded with defer)
 img/pubs/           — Publication teaser images (webp, ~640px wide, white frames trimmed)
 media/              — Short muted research clips (mp4 + jpg poster)
 photo.jpg           — Profile photo
 mark.svg            — Penguin mark (favicon; same path is inlined as `<svg class="mark">` in nav/footer)
 icon.png            — Original penguin PNG (favicon fallback)
+robots.txt, sitemap.xml — search engine hints (update sitemap lastmod on content changes)
+cv/                 — LaTeX CV sources and the published CV PDF (see below)
 .github/workflows/deploy.yml  — GitHub Actions Pages deployment
 ```
 
@@ -54,13 +56,18 @@ counts in sync. The home-page research chips and paper rail link to publications
 repeat the full title and author list, so keep them identical to `publications.html`.
 
 Search: page titles, meta descriptions (≤155 chars), the Person JSON-LD on the home page and the
-ScholarlyArticle JSON-LD on the publications page carry the keywords. The publications JSON-LD is
-generated from the `<li class="pub">` entries, so update it with the list. Keep `sitemap.xml` current.
+ScholarlyArticle JSON-LD on the publications page carry the keywords. The publications JSON-LD mirrors
+the `<li class="pub">` entries (one ScholarlyArticle per paper); edit it by hand when the list changes.
+Keep `sitemap.xml` current.
 
 ## Design System (style.css)
 
 Design ideas adapted (without the branding) from the IRL lab site: mono numbered section labels,
 publication rows with teaser thumbnails and venue badges, a horizontal paper rail.
+
+Look: flat, no gradients. White page with deliberate colour bands — soft blue (`--band-soft`) behind the
+header, publications title and teaching; ink (`--band-ink`) behind the recent-publication cards, whose
+cards switch back to base tokens. Text sits on the page between rules; only image cards are boxed.
 
 Tokens in `:root` (single accent, no second brand colour):
 - `--accent` / `--accent-soft` / `--on-accent` — links, badges, labels, primary button
