@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maximilian Xiling Li</title>
-  <meta name="description" content="PhD researcher in robotics and AI at Karlsruhe Institute of Technology.">
+  <meta name="description" content="PhD researcher in robot learning at KIT: concept-aware robot policies grounded in visual affordances and force.">
   <meta property="og:title" content="Maximilian Xiling Li">
-  <meta property="og:description" content="PhD researcher in robotics and AI at Karlsruhe Institute of Technology.">
+  <meta property="og:description" content="PhD researcher in robot learning at KIT: concept-aware robot policies grounded in visual affordances and force.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lixiling.github.io/">
   <meta property="og:image" content="https://lixiling.github.io/photo.jpg">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Maximilian Xiling Li">
-  <meta name="twitter:description" content="PhD researcher in robotics and AI at Karlsruhe Institute of Technology.">
+  <meta name="twitter:description" content="PhD researcher in robot learning at KIT: concept-aware robot policies grounded in visual affordances and force.">
   <meta name="twitter:image" content="https://lixiling.github.io/photo.jpg">
   <link rel="canonical" href="https://lixiling.github.io/">
   <script type="application/ld+json">
@@ -34,251 +34,391 @@
       { "@type": "CollegeOrUniversity", "name": "Karlsruhe Institute of Technology" },
       { "@type": "CollegeOrUniversity", "name": "TU Darmstadt" }
     ],
-    "knowsAbout": ["Imitation Learning", "Interpretable AI", "Robot Perception", "Robot Manipulation"],
+    "knowsAbout": ["Robot Learning", "Imitation Learning", "Explainable AI", "Robot Perception", "Robot Manipulation"],
     "sameAs": [
       "https://scholar.google.com/citations?user=N8vw1IAAAAAJ&hl=en",
-      "https://github.com/lixiling"
+      "https://github.com/lixiling",
+      "https://www.linkedin.com/in/lixiling"
     ]
   }
   </script>
+  <script>document.documentElement.classList.add('js'); try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="icon.png" type="image/jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <!-- Icons: Font Awesome Free 6.5.1 (CC BY 4.0, fontawesome.com/license/free), inlined as SVG -->
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="icon" href="icon.png" type="image/png" sizes="900x990">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item site-name" href="index.html">Maximilian Xiling Li</a>
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-      <div id="mainNav" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item nav-link is-active" href="index.html">About</a>
-          <a class="navbar-item nav-link" href="publications.html">Publications</a>
-          <a class="navbar-item nav-link" href="posts.html">Posts</a>
-        </div>
+  <nav class="site-nav" aria-label="Main">
+    <div class="wrap nav-inner">
+      <a class="site-name" href="index.html"><svg class="mark" viewBox="-20 -20 940 1030" aria-hidden="true" focusable="false"><path transform="translate(0 990) scale(.1 -.1)" d="M4898 9697 c-249 -322 -359 -449 -562 -653 -402 -401 -770 -649 -1526 -1032 -179 -90 -350 -178 -380 -194 -1100 -613 -1868 -1513 -2223 -2603 -420 -1289 -188 -2684 610 -3680 741 -924 2094 -1499 3608 -1532 1676 -37 3158 627 3924 1757 783 1155 866 2756 211 4085 -444 902 -1208 1622 -2157 2036 -143 62 -126 27 -143 294 -27 445 -105 754 -246 977 l-25 38 -118 -108 c-142 -130 -215 -188 -316 -247 -119 -71 -253 -123 -260 -102 -2 7 -9 145 -15 307 -11 309 -23 408 -66 550 -27 89 -98 236 -136 282 l-23 28 -157 -203z m-1893 -3133 c474 -70 967 -309 1407 -681 55 -47 93 -72 100 -67 7 4 38 28 68 54 345 294 824 554 1193 649 853 220 1594 -147 2147 -1066 260 -431 385 -853 385 -1298 0 -393 -90 -697 -297 -1004 l-50 -73 54 -57 c114 -117 189 -235 235 -366 40 -118 40 -310 -1 -435 -152 -460 -761 -1035 -1474 -1391 -1344 -673 -3234 -661 -4624 31 -596 297 -977 647 -1271 1167 -225 397 -190 668 130 1013 l55 60 -69 73 c-542 570 -438 1500 290 2592 422 634 1006 905 1722 799z M2190 5289 c-451 -66 -632 -631 -301 -941 224 -211 551 -208 766 7 323 323 136 871 -319 934 -43 6 -80 10 -84 10 -4 -1 -32 -5 -62 -10z m147 -366 c107 -50 125 -223 33 -307 -116 -104 -280 -19 -280 147 0 132 130 216 247 160z M6630 5275 c-428 -96 -584 -622 -276 -929 300 -299 814 -159 920 250 101 391 -255 767 -644 679z m187 -363 c122 -66 116 -270 -10 -331 -184 -89 -337 172 -181 308 19 17 47 33 62 37 15 3 32 7 37 8 14 4 67 -9 92 -22z M4292 4260 c-408 -43 -860 -230 -1477 -613 -161 -99 -238 -204 -239 -322 0 -131 76 -214 298 -324 873 -433 1972 -478 2936 -120 168 63 485 217 533 259 119 104 121 297 5 407 -63 59 -419 273 -638 383 -509 255 -1013 373 -1418 330z m558 -255 c267 -56 576 -179 916 -365 240 -130 303 -171 353 -225 116 -126 10 -203 -494 -360 -909 -282 -1644 -252 -2568 105 -311 120 -294 221 71 428 470 267 791 391 1157 446 98 14 443 -3 565 -29z M3381 3538 c-105 -56 -106 -194 -2 -248 54 -27 2187 -43 2239 -16 86 45 98 197 19 249 -40 26 -41 26 -1157 32 l-1055 6 -44 -23z"/></svg><span><b>Maximilian Xiling Li</b><small>Robot learning · KIT</small></span></a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div id="mainNav" class="nav-menu">
+        <a class="nav-link" href="index.html#research">Research</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="index.html#cv">CV</a>
+        <a class="nav-link" href="index.html#teaching">Teaching</a>
+        <button type="button" class="theme-toggle" aria-label="Switch color theme">
+          <svg class="icon icon-moon" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg><svg class="icon icon-sun" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Profile Hero -->
-  <section class="hero is-medium profile-hero">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column is-narrow">
-            <div class="profile-photo">
-              <img src="photo.jpg" alt="Maximilian Xiling Li"
-                onerror="this.outerHTML='<div class=\'photo-placeholder\'>ML</div>'">
-            </div>
-          </div>
-          <div class="column">
-            <p class="profile-name">Maximilian Xiling Li</p>
-            <p class="profile-title">PhD Researcher · Intuitive Robots Lab</p>
-            <p class="profile-institution">Karlsruhe Institute of Technology</p>
-            <p class="profile-bio">
-              PhD researcher at the <a href="https://www.irl.iar.kit.edu/">Intuitive Robots Lab</a>,
-              Karlsruhe Institute of Technology, advised by
-              <a href="https://rudolf.intuitive-robots.net/">Rudolf Lioutikov</a>.
-              I work on concept-aware robot policies: making manipulation more robust
-              by grounding learned policies in high-level concepts like visual affordances
-              and force awareness, an idea rooted in my interest in explainable AI.
-            </p>
-            <div class="profile-links buttons">
-              <a href="mailto:maximilian.li@kit.edu" class="button is-small">
-                <span class="icon"><i class="fas fa-envelope"></i></span>
-                <span>Email</span>
-              </a>
-              <a href="https://scholar.google.com/citations?user=N8vw1IAAAAAJ&hl=en" target="_blank" rel="noopener"
-                class="button is-small">
-                <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-                <span>Scholar</span>
-              </a>
-              <a href="https://github.com/lixiling" target="_blank" rel="noopener" class="button is-small">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span>GitHub</span>
-              </a>
-            </div>
+  <main>
+    <!-- Intro -->
+    <header class="intro">
+      <div class="wrap intro-inner">
+        <div>
+          <p class="eyebrow">Robot learning researcher · PhD candidate, KIT</p>
+          <h1>Maximilian Xiling Li<span class="dot">.</span></h1>
+          <p class="thesis">I build robot policies that extract more from the data they already have,
+            by grounding them in concepts like <b>visual affordances</b> and <b>force</b>.</p>
+          <p class="sub">
+            PhD researcher at the <a href="https://www.irl.iar.kit.edu/">Intuitive Robots Lab</a>,
+            Karlsruhe Institute of Technology, advised by
+            <a href="https://rudolf.intuitive-robots.net/">Rudolf Lioutikov</a>, with papers at
+            CoRL, CVPR, ICRA, RSS and NeurIPS. In 2025 I interned at
+            <a href="https://pokeandwiggle.com/" target="_blank" rel="noopener">Poke &amp; Wiggle</a>,
+            working on MLOps and vision-language-action models for robots.
+          </p>
+          <ul class="interests" aria-label="Research interests">
+            <li>Imitation learning</li>
+            <li>Visual affordances</li>
+            <li>Force awareness</li>
+            <li>Explainable AI</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-solid" href="mailto:maximilian.li@kit.edu"><svg class="icon icon-envelope" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>Email</a>
+            <a class="btn" href="https://scholar.google.com/citations?user=N8vw1IAAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon icon-graduation-cap" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>Scholar</a>
+            <a class="btn" href="https://github.com/lixiling" target="_blank" rel="noopener"><svg class="icon icon-github" viewBox="0 0 496 512" aria-hidden="true" focusable="false"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/lixiling" target="_blank" rel="noopener"><svg class="icon icon-linkedin" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>LinkedIn</a>
+            <a class="btn" href="publications.html"><svg class="icon icon-file-lines" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>Publications</a>
           </div>
         </div>
+        <figure class="portrait">
+          <img src="photo.jpg" alt="Portrait of Maximilian Xiling Li" width="450" height="600"
+            onerror="this.outerHTML='<div class=\'photo-placeholder\'>ML</div>'">
+          <figcaption>Karlsruhe, Germany</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Research & Background -->
-  <section class="section content-section">
-    <div class="container">
-      <div class="columns">
-        <div class="column is-7">
-          <div class="section-card">
-            <h2 class="section-heading">Research</h2>
-            <p class="section-text">
-              My research asks how robots can extract <strong>richer information</strong>
-              from available data rather than simply requiring more of it. Starting from an
-              interest in <strong>explainable AI</strong>, making the decisions of learned
-              models transparent and interpretable, I arrived at the idea that grounding
-              policies in human-understandable concepts can also make them more
-              <strong>robust</strong>. Under the theme of <strong>Concept-Aware Robot
-                Policies (CARP)</strong>, I investigate how underutilized concepts such as
-              <strong>visual affordances</strong>, and <strong>force-aware action representations</strong>, can be
-              integrated
-              into learned policies to improve manipulation performance.
-            </p>
-            <div class="tags research-tags mt-4">
-              <span class="tag">Robot Learning</span>
-              <span class="tag">Visual Affordances</span>
-              <span class="tag">Movement Primitives</span>
-              <span class="tag">Force-Aware Control</span>
-              <span class="tag">Imitation Learning</span>
-              <span class="tag">Explainable AI</span>
-              <span class="tag">Robot Manipulation</span>
-            </div>
-          </div>
-        </div>
-        <div class="column is-5">
-          <div class="section-card">
-            <h2 class="section-heading">Background</h2>
-            <p class="section-text">
-              Max studied Computer Science at TU Darmstadt, during which he also worked as a
-              research working student at SAP in Big Data Intelligence and Research (2013–2017).
-              During his bachelor's he was an exchange student at
-              <a href="https://en.tongji.edu.cn/">Tongji University</a> in Shanghai.
-              He continued at KIT for his master's, working as a research assistant at
-              the <a href="https://www.hcsl.kit.edu/">Human-Centered Systems Lab</a>
-              and the <a href="https://alr.iar.kit.edu/">Autonomous Learning Robots Lab</a>,
-              before joining the
-              <a href="https://www.irl.iar.kit.edu/">Intuitive Robots Lab</a> as a PhD researcher in 2022.
+    <!-- Research -->
+    <section class="band" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <p class="eyebrow" data-index="01">Research</p>
+        <div class="section-head">
+          <div>
+            <h2 id="research-title">Concept-aware robot policies</h2>
+            <p class="lede">
+              My research asks how robots can extract <strong>richer information</strong> from available
+              data rather than simply requiring more of it. Starting from <strong>explainable AI</strong>,
+              I arrived at the idea that grounding policies in human-understandable concepts can also make
+              them more <strong>robust</strong>. Under the theme of Concept-Aware Robot Policies (CARP),
+              I investigate how underutilized concepts such as <strong>visual affordances</strong> and
+              <strong>force-aware action representations</strong> can improve manipulation.
             </p>
           </div>
         </div>
+
+        <div class="themes">
+          <article class="theme">
+            <div class="shot">
+              <img src="img/pubs/mops-segm.webp" alt="Segmentation masks of a simulated kitchen scene from the MOPS dataset" loading="lazy" width="656" height="410">
+              <span class="tag-overlay">MOPS segmentation</span>
+            </div>
+            <div class="body">
+              <span class="num">01</span>
+              <h3>Visual affordances &amp; scene understanding</h3>
+              <p>Perceiving what a scene affords and how it is structured: affordance detection on 3D point
+                clouds, structured image representations, spatial annotations from demonstrations, and
+                photoreal simulated data for robot vision.</p>
+              <div class="chips">
+                <a class="chip" href="publications.html#mops">MOPS</a>
+                <a class="chip" href="publications.html#affordance-prototypes">Affordance prototypes</a>
+                <a class="chip" href="publications.html#sir">SIR</a>
+                <a class="chip" href="publications.html#sparc">SPARC</a>
+              </div>
+            </div>
+          </article>
+          <article class="theme">
+            <div class="shot">
+              <img src="img/pubs/fa-prodmp.webp" alt="Robot arm performing a force-aware insertion task" loading="lazy" width="441" height="640">
+              <span class="tag-overlay">FA-ProDMP</span>
+            </div>
+            <div class="body">
+              <span class="num">02</span>
+              <h3>Force-aware actions</h3>
+              <p>Probabilistic movement primitives that take force into account and replan on events,
+                for manipulation tasks where contact matters.</p>
+              <div class="chips">
+                <a class="chip" href="publications.html#fa-prodmp">FA-ProDMP</a>
+              </div>
+            </div>
+          </article>
+          <article class="theme">
+            <div class="shot">
+              <video src="media/prototypes.mp4" poster="media/prototypes.jpg" muted loop playsinline preload="none" data-autoplay aria-hidden="true"></video>
+              <span class="tag-overlay">Prototypes</span>
+            </div>
+            <div class="body">
+              <span class="num">03</span>
+              <h3>Interpretable latent structures</h3>
+              <p>Prototype models that organize the latent space around learned, inspectable prototypes, so
+                each prediction can be explained by comparison to them.</p>
+              <div class="chips">
+                <a class="chip" href="publications.html#prototype-overview">Prototype formulations</a>
+                <a class="chip" href="publications.html#affordance-prototypes">Affordance prototypes</a>
+              </div>
+            </div>
+          </article>
+          <article class="theme">
+            <div class="shot">
+              <img src="img/pubs/ml-cur-real.webp" alt="Robot arm learning a manipulation skill from human demonstration" loading="lazy" width="199" height="153">
+              <span class="tag-overlay">Versatile skills</span>
+            </div>
+            <div class="body">
+              <span class="num">04</span>
+              <h3>Versatile imitation learning</h3>
+              <p>Learning diverse, multimodal behavior from human demonstrations with curriculum-based
+                mixtures of experts and score-based diffusion policies.</p>
+              <div class="chips">
+                <a class="chip" href="publications.html#ml-cur">ML-Cur</a>
+                <a class="chip" href="publications.html#imc">IMC</a>
+                <a class="chip" href="publications.html#beso">BESO</a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Selected Publications -->
-  <section class="section content-section no-top-pad">
-    <div class="container">
-      <div class="section-card">
-        <h2 class="section-heading">Selected Publications</h2>
 
-        <div class="pub-entry">
-          <span class="pub-title">Multi-Objective Photoreal Simulation (MOPS) Dataset for Computer Vision in Robotic
-            Manipulation</span>
-          <span class="pub-authors"><strong>Maximilian Xiling Li</strong>, Paul Mattes, Nils Blank, Korbinian Franz
-            Rudolf, Paul Werner Lödige, Rudolf Lioutikov</span>
-          <span class="pub-venue">Workshop on Structured World Models for Robotic Manipulation, 2025</span>
-          <div class="pub-links">
-            <a href="https://intuitive-robots.github.io/mops/" target="_blank" rel="noopener" class="button is-small">
-              <span class="icon is-small"><i class="fas fa-globe"></i></span>
-              <span>Project</span>
-            </a>
+    <!-- Selected publications — titles and author lists match publications.html -->
+    <section class="band tinted" aria-labelledby="work-title" data-rail>
+      <div class="wrap">
+        <p class="eyebrow" data-index="02">Selected publications</p>
+        <div class="section-head">
+          <h2 id="work-title">Recent work</h2>
+          <div class="rail-nav" hidden>
+            <button type="button" data-dir="-1" aria-label="Scroll publications left"><svg class="icon icon-arrow-left" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></button>
+            <button type="button" data-dir="1" aria-label="Scroll publications right"><svg class="icon icon-arrow-right" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg></button>
           </div>
         </div>
-
-        <div class="pub-entry">
-          <span class="pub-title">Use the Force, Bot! — Force-aware ProDMP with Event-based Replanning</span>
-          <span class="pub-authors">Paul Werner Lödige, <strong>Maximilian Xiling Li</strong>, Rudolf Lioutikov</span>
-          <span><em class="pub-badge">ICRA</em><span class="pub-venue">IEEE International Conference on Robotics and
-              Automation, 2025</span></span>
-          <div class="pub-links">
-            <a href="https://intuitive-robots.github.io/FA-ProDMP/" target="_blank" rel="noopener"
-              class="button is-small">
-              <span class="icon is-small"><i class="fas fa-globe"></i></span>
-              <span>Project</span>
-            </a>
-            <a href="https://arxiv.org/abs/2409.11144" target="_blank" rel="noopener" class="button is-small">
-              <span class="icon is-small"><i class="fas fa-file-lines"></i></span>
-              <span>arXiv</span>
-            </a>
-            <a href="https://github.com/intuitive-robots/FA-ProDMP" target="_blank" rel="noopener"
-              class="button is-small">
-              <span class="icon is-small"><i class="fas fa-code"></i></span>
-              <span>Code</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="pub-entry">
-          <span class="pub-title">Information Maximizing Curriculum: A Curriculum-based Approach for Learning Versatile
-            Skills</span>
-          <span class="pub-authors">Denis Blessing, Onur Celik, Xiaogang Jia, Moritz Reuss, <strong>Maximilian
-              Li</strong>, Rudolf Lioutikov, Gerhard Neumann</span>
-          <span><em class="pub-badge">NeurIPS</em><span class="pub-venue">Advances in Neural Information Processing
-              Systems, 2023</span></span>
-          <div class="pub-links">
-            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/a1e6783e4d739196cad3336f12d402bf-Abstract-Conference.html"
-              target="_blank" rel="noopener" class="button is-small">
-              <span class="icon is-small"><i class="fas fa-file-lines"></i></span>
-              <span>Paper</span>
-            </a>
-            <a href="https://arxiv.org/abs/2303.15349" target="_blank" rel="noopener" class="button is-small">
-              <span class="icon is-small"><i class="fas fa-file-lines"></i></span>
-              <span>arXiv</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="pub-entry">
-          <span class="pub-title">Goal Conditioned Imitation Learning using Score-based Diffusion Policies</span>
-          <span class="pub-authors">Moritz Reuss, <strong>Maximilian Li</strong>, Xiaogang Jia, Rudolf
-            Lioutikov</span>
-          <span><em class="pub-badge">RSS</em><span class="pub-venue">Robotics: Science and Systems,
-              2023</span></span>
-          <div class="pub-links">
-            <a href="https://intuitive-robots.github.io/beso-website/" target="_blank" rel="noopener"
-              class="button is-small">
-              <span class="icon is-small"><i class="fas fa-globe"></i></span>
-              <span>Project</span>
-            </a>
-            <a href="https://arxiv.org/abs/2304.02532" target="_blank" rel="noopener" class="button is-small">
-              <span class="icon is-small"><i class="fas fa-file-lines"></i></span>
-              <span>arXiv</span>
-            </a>
-            <a href="https://github.com/intuitive-robots/beso" target="_blank" rel="noopener"
-              class="button is-small">
-              <span class="icon is-small"><i class="fas fa-code"></i></span>
-              <span>Code</span>
-            </a>
-          </div>
-        </div>
-
-        <p class="mt-5">
-          <a href="publications.html" class="more-link">View all publications &rarr;</a>
-        </p>
       </div>
-    </div>
-  </section>
+      <div class="rail" tabindex="0" aria-label="Selected publications, scrollable">
+        <article class="paper">
+          <a class="shot cover" href="https://arxiv.org/abs/2606.13497" tabindex="-1" aria-hidden="true"><img src="img/pubs/sparc.webp" alt="" loading="lazy" width="640" height="360"></a>
+          <div class="meta"><span class="badge">CoRL</span><span class="year">2026</span></div>
+          <div class="body">
+            <h3><a href="https://arxiv.org/abs/2606.13497">SPARC: Reliable Spatial Annotations from Robot Demonstrations at Scale</a></h3>
+            <p class="authors">Nils Blank, Paul Mattes, <b>Maximilian Xiling Li</b>, Jakub Suliga, Thomas Roth, Moritz Reuss, Pankhuri Vanjani, Rudolf Lioutikov</p>
+            <a class="paper-more" href="publications.html#sparc">Details &amp; links</a>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="shot" href="https://arxiv.org/abs/2606.30101" tabindex="-1" aria-hidden="true"><img src="img/pubs/sir.webp" alt="" loading="lazy" width="495" height="642"></a>
+          <div class="meta"><span class="badge">CVPR</span><span class="year">2026</span></div>
+          <div class="body">
+            <h3><a href="https://arxiv.org/abs/2606.30101">SIR: Structured Image Representations for Explainable Robot Learning</a></h3>
+            <p class="authors">Paul Mattes, Jan Schwab, Jens Bosch, Nils Blank, <b>Maximilian Xiling Li</b>, Minh-Trung Tang, Moritz Haberland, Rudolf Lioutikov</p>
+            <a class="paper-more" href="publications.html#sir">Details &amp; links</a>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="shot" href="https://arxiv.org/abs/2606.11901" tabindex="-1" aria-hidden="true"><img src="img/pubs/duobench.webp" alt="" loading="lazy" width="640" height="238"></a>
+          <div class="meta"><span class="badge preprint">Preprint</span><span class="year">2026</span></div>
+          <div class="body">
+            <h3><a href="https://arxiv.org/abs/2606.11901">DuoBench: A Reproducible Benchmark for Bimanual Manipulation in Simulation and the Real World</a></h3>
+            <p class="authors">Tobias Jülg, Seongjin Bien, Simon Hilber, Yannik Blei, Pierre Krack, <b>Maximilian Li</b>, Sven Parusel, Rudolf Lioutikov, Florian Walter, Wolfram Burgard</p>
+            <a class="paper-more" href="publications.html#duobench">Details &amp; links</a>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="shot cover" href="https://arxiv.org/abs/2504.18355" tabindex="-1" aria-hidden="true"><img src="media/prototypes.jpg" alt="" loading="lazy" width="600" height="600"></a>
+          <div class="meta"><span class="badge preprint">Preprint</span><span class="year">2025</span></div>
+          <div class="body">
+            <h3><a href="https://arxiv.org/abs/2504.18355">Interpretable Affordance Detection on 3D Point Clouds with Probabilistic Prototypes</a></h3>
+            <p class="authors"><b>Maximilian Xiling Li</b>, Korbinian Franz Rudolf, Nils Blank, Rudolf Lioutikov</p>
+            <a class="paper-more" href="publications.html#affordance-prototypes">Details &amp; links</a>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="shot" href="https://intuitive-robots.github.io/FA-ProDMP/" tabindex="-1" aria-hidden="true"><img src="img/pubs/fa-prodmp.webp" alt="" loading="lazy" width="441" height="640"></a>
+          <div class="meta"><span class="badge">ICRA</span><span class="year">2025</span></div>
+          <div class="body">
+            <h3><a href="https://intuitive-robots.github.io/FA-ProDMP/">Use the Force, Bot! — Force-Aware ProDMP with Event-Based Replanning</a></h3>
+            <p class="authors">Paul Werner Lödige, <b>Maximilian Xiling Li</b>, Rudolf Lioutikov</p>
+            <a class="paper-more" href="publications.html#fa-prodmp">Details &amp; links</a>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="shot cover" href="https://intuitive-robots.github.io/mops/" tabindex="-1" aria-hidden="true"><img src="img/pubs/mops.webp" alt="" loading="lazy" width="656" height="410"></a>
+          <div class="meta"><span class="badge">Workshop</span><span class="year">2025</span></div>
+          <div class="body">
+            <h3><a href="https://intuitive-robots.github.io/mops/">Multi-Objective Photoreal Simulation (MOPS) Dataset for Computer Vision in Robotic Manipulation</a></h3>
+            <p class="authors"><b>Maximilian Xiling Li</b>, Paul Mattes, Nils Blank, Korbinian Franz Rudolf, Paul Werner Lödige, Rudolf Lioutikov</p>
+            <a class="paper-more" href="publications.html#mops">Details &amp; links</a>
+          </div>
+        </article>
+        <article class="paper">
+          <a class="shot" href="https://intuitive-robots.github.io/beso-website/" tabindex="-1" aria-hidden="true"><img src="img/pubs/beso.webp" alt="" loading="lazy" width="640" height="440"></a>
+          <div class="meta"><span class="badge">RSS</span><span class="year">2023</span></div>
+          <div class="body">
+            <h3><a href="https://intuitive-robots.github.io/beso-website/">Goal-Conditioned Imitation Learning using Score-based Diffusion Policies</a></h3>
+            <p class="authors">Moritz Reuss, <b>Maximilian Li</b>, Xiaogang Jia, Rudolf Lioutikov</p>
+            <a class="paper-more" href="publications.html#beso">Details &amp; links</a>
+          </div>
+        </article>
+      </div>
+      <div class="wrap">
+        <a class="text-link more" href="publications.html">All publications <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p class="has-text-centered">Maximilian Xiling Li · <a
-          href="mailto:maximilian.li@kit.edu">maximilian.li@kit.edu</a></p>
+    <!-- CV -->
+    <section class="band" id="cv" aria-labelledby="cv-title">
+      <div class="wrap">
+        <p class="eyebrow" data-index="03">Curriculum vitae</p>
+        <div class="section-head">
+          <h2 id="cv-title">Experience &amp; education</h2>
+        </div>
+        <div class="split">
+          <div class="sheet">
+            <h3>Experience</h3>
+            <ul class="timeline">
+              <li>
+                <span class="when">2022 – now</span>
+                <div><strong>PhD Researcher</strong>
+                  <p><a href="https://www.irl.iar.kit.edu/">Intuitive Robots Lab</a>, Karlsruhe Institute of Technology.
+                    Advised by <a href="https://rudolf.intuitive-robots.net/">Rudolf Lioutikov</a>.</p></div>
+              </li>
+              <li>
+                <span class="when">2025</span>
+                <div><strong>Intern, MLOps &amp; Robot VLA</strong>
+                  <p><a href="https://pokeandwiggle.com/" target="_blank" rel="noopener">Poke &amp; Wiggle</a></p></div>
+              </li>
+              <li>
+                <span class="when">2013 – 2017</span>
+                <div><strong>Research Working Student</strong>
+                  <p>SAP, Big Data Intelligence and Research.</p></div>
+              </li>
+            </ul>
+          </div>
+          <div class="sheet">
+            <h3>Education</h3>
+            <ul class="timeline">
+              <li>
+                <span class="when">2018 – 2022</span>
+                <div><strong>M.Sc. Computer Science</strong>
+                  <p>Karlsruhe Institute of Technology. Research assistant at the
+                    <a href="https://h-lab.win.kit.edu/">Human-Centered Systems Lab</a> and the
+                    <a href="https://alr.iar.kit.edu/">Autonomous Learning Robots Lab</a>.</p></div>
+              </li>
+              <li>
+                <span class="when">2013 – 2018</span>
+                <div><strong>B.Sc. Computer Science</strong>
+                  <p>TU Darmstadt, including an exchange at <a href="https://en.tongji.edu.cn/">Tongji University</a>, Shanghai.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="sheet outside">
+          <h3>Outside the lab</h3>
+          <p>I'm drawn to anything with a good story: books, video games, and running tabletop campaigns
+            as a Dungeons &amp; Dragons game master.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching -->
+    <section class="band tinted" id="teaching" aria-labelledby="teaching-title">
+      <div class="wrap">
+        <p class="eyebrow" data-index="04">Teaching</p>
+        <div class="section-head">
+          <div>
+            <h2 id="teaching-title">Teaching &amp; supervision</h2>
+            <p class="lede">I co-teach courses on explainable AI, behavior foundation models and robot
+              learning at KIT, and supervise Bachelor's and Master's theses.</p>
+          </div>
+        </div>
+
+        <article class="feature">
+          <div>
+            <p class="feature-label"><span class="badge">Teaching assistant</span><span class="kind">Lecture · English</span></p>
+            <h3>Explainable Artificial Intelligence</h3>
+            <p>A lecture on the concepts and methods of explainable AI, seen from the perspective of
+              robot learning and human–robot interaction: interpretable scene, task and behavior
+              representations, data-driven and goal-driven explanation, and approaches that bring
+              XAI-based human feedback into the learning process itself.</p>
+          </div>
+          <ul class="chips" aria-label="Lecture topics">
+            <li class="chip">Interpretable vs. explainable ML</li>
+            <li class="chip">GNNs &amp; Transformers</li>
+            <li class="chip">Diffusion &amp; score-based models</li>
+            <li class="chip">Interpretable representations</li>
+            <li class="chip">Data- &amp; goal-driven XAI</li>
+            <li class="chip">XAI-based human feedback</li>
+          </ul>
+        </article>
+
+        <div class="course-grid">
+          <article class="course">
+            <span class="kind">Seminar &amp; lab course</span>
+            <h3>Explainable AI</h3>
+            <p>Students study XAI methods in the context of robot learning in the seminar, then implement
+              and evaluate them in the accompanying research project.</p>
+          </article>
+          <article class="course">
+            <span class="kind">Seminar &amp; lab course</span>
+            <h3>Behavior Foundation Models</h3>
+            <p>Students study and develop methods for robot learning with behavior foundation models,
+              such as vision-language-action models (VLAs) and WAMs.</p>
+          </article>
+          <article class="course">
+            <span class="kind">Bachelor's · Introductory lab course &amp; proseminar</span>
+            <h3>Robot Learning</h3>
+            <p>An introduction to PyTorch, MuJoCo benchmarks and the tools of robot learning research:
+              students train and evaluate policies in simulation, working with WandB, Hydra and Git.</p>
+          </article>
+        </div>
+
+        <div class="sheet theses">
+          <h3>Thesis supervision · highlights</h3>
+          <ul class="rows">
+            <li><div><strong>Force-Aware Robot Manipulation using Movement Primitives</strong>
+                <em>Paul Lödige · published as <a href="publications.html#fa-prodmp">Use the Force, Bot!</a> at ICRA 2025</em></div><span class="kind">M.Sc.</span></li>
+            <li><div><strong>Concept Motivated Prototypes: Learning Concept Representations with Probabilistic Prototypes</strong>
+                <em>Korbinian Rudolf</em></div><span class="kind">M.Sc.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="foot-rule"></div>
+    <div class="wrap foot-grid">
+      <p class="foot-name"><svg class="mark" viewBox="-20 -20 940 1030" aria-hidden="true" focusable="false"><path transform="translate(0 990) scale(.1 -.1)" d="M4898 9697 c-249 -322 -359 -449 -562 -653 -402 -401 -770 -649 -1526 -1032 -179 -90 -350 -178 -380 -194 -1100 -613 -1868 -1513 -2223 -2603 -420 -1289 -188 -2684 610 -3680 741 -924 2094 -1499 3608 -1532 1676 -37 3158 627 3924 1757 783 1155 866 2756 211 4085 -444 902 -1208 1622 -2157 2036 -143 62 -126 27 -143 294 -27 445 -105 754 -246 977 l-25 38 -118 -108 c-142 -130 -215 -188 -316 -247 -119 -71 -253 -123 -260 -102 -2 7 -9 145 -15 307 -11 309 -23 408 -66 550 -27 89 -98 236 -136 282 l-23 28 -157 -203z m-1893 -3133 c474 -70 967 -309 1407 -681 55 -47 93 -72 100 -67 7 4 38 28 68 54 345 294 824 554 1193 649 853 220 1594 -147 2147 -1066 260 -431 385 -853 385 -1298 0 -393 -90 -697 -297 -1004 l-50 -73 54 -57 c114 -117 189 -235 235 -366 40 -118 40 -310 -1 -435 -152 -460 -761 -1035 -1474 -1391 -1344 -673 -3234 -661 -4624 31 -596 297 -977 647 -1271 1167 -225 397 -190 668 130 1013 l55 60 -69 73 c-542 570 -438 1500 290 2592 422 634 1006 905 1722 799z M2190 5289 c-451 -66 -632 -631 -301 -941 224 -211 551 -208 766 7 323 323 136 871 -319 934 -43 6 -80 10 -84 10 -4 -1 -32 -5 -62 -10z m147 -366 c107 -50 125 -223 33 -307 -116 -104 -280 -19 -280 147 0 132 130 216 247 160z M6630 5275 c-428 -96 -584 -622 -276 -929 300 -299 814 -159 920 250 101 391 -255 767 -644 679z m187 -363 c122 -66 116 -270 -10 -331 -184 -89 -337 172 -181 308 19 17 47 33 62 37 15 3 32 7 37 8 14 4 67 -9 92 -22z M4292 4260 c-408 -43 -860 -230 -1477 -613 -161 -99 -238 -204 -239 -322 0 -131 76 -214 298 -324 873 -433 1972 -478 2936 -120 168 63 485 217 533 259 119 104 121 297 5 407 -63 59 -419 273 -638 383 -509 255 -1013 373 -1418 330z m558 -255 c267 -56 576 -179 916 -365 240 -130 303 -171 353 -225 116 -126 10 -203 -494 -360 -909 -282 -1644 -252 -2568 105 -311 120 -294 221 71 428 470 267 791 391 1157 446 98 14 443 -3 565 -29z M3381 3538 c-105 -56 -106 -194 -2 -248 54 -27 2187 -43 2239 -16 86 45 98 197 19 249 -40 26 -41 26 -1157 32 l-1055 6 -44 -23z"/></svg><span><b>Maximilian Xiling Li</b> · Intuitive Robots Lab, Karlsruhe Institute of Technology</span></p>
+      <ul class="foot-links">
+        <li><a href="mailto:maximilian.li@kit.edu"><svg class="icon icon-envelope" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>maximilian.li@kit.edu</a></li>
+        <li><a href="https://scholar.google.com/citations?user=N8vw1IAAAAAJ&hl=en" target="_blank" rel="noopener"><svg class="icon icon-graduation-cap" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></svg>Scholar</a></li>
+        <li><a href="https://github.com/lixiling" target="_blank" rel="noopener"><svg class="icon icon-github" viewBox="0 0 496 512" aria-hidden="true" focusable="false"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/lixiling" target="_blank" rel="noopener"><svg class="icon icon-linkedin" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>LinkedIn</a></li>
+      </ul>
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const burger = document.querySelector('.navbar-burger');
-      const menu = document.getElementById(burger.dataset.target);
-      burger.addEventListener('click', () => {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-      });
-    });
-  </script>
+  <script src="main.js" defer></script>
 
 </body>
 
