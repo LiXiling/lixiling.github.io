@@ -17,6 +17,8 @@
   --on-accent: #ffffff;
   --scrim: rgba(10, 18, 28, 0.72);
   --shadow: 0 1px 2px rgba(17, 26, 36, 0.05), 0 14px 34px -26px rgba(17, 26, 36, 0.45);
+  --band-soft: #eef2fb;
+  --band-ink: #101826;
 
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   /* Headings, name and tagline. Weight and tracking are tuned per typeface. */
@@ -49,6 +51,8 @@
   --on-accent: #0b0f14;
   --scrim: rgba(4, 8, 12, 0.78);
   --shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 18px 48px -28px rgba(0, 0, 0, 0.9);
+  --band-soft: #121b2b;
+  --band-ink: #05080c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,6 +71,8 @@
     --on-accent: #0b0f14;
     --scrim: rgba(4, 8, 12, 0.78);
     --shadow: 0 1px 0 rgba(255, 255, 255, 0.03), 0 18px 48px -28px rgba(0, 0, 0, 0.9);
+  --band-soft: #121b2b;
+  --band-ink: #05080c;
   }
 }
 
@@ -444,6 +450,25 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
   .pub .venue-full { display: none; }
   .eyebrow { letter-spacing: 0.1em; }
 }
+/* ── Colour bands ──
+   Flat, deliberate bands: soft blue header and teaching, an ink band behind
+   the publication cards. Cards on the ink band switch back to the base tokens. */
+:root { --base-text: var(--text); --base-muted: var(--muted); --base-faint: var(--faint); --base-line: var(--line); --base-accent: var(--accent); }
+.intro,
+.page-head,
+#teaching { background: var(--band-soft); border-color: transparent; }
+section[data-rail] {
+  background: var(--band-ink); border-color: transparent; color: var(--text);
+  --text: #eef2f7; --muted: #aab5c3; --faint: #8b98a8; --line: rgba(255, 255, 255, 0.14); --accent: #93a9ff;
+}
+section[data-rail] .rail-nav button { background: transparent; }
+section[data-rail] .rail { scrollbar-color: rgba(255, 255, 255, 0.2) transparent; }
+section[data-rail] .paper {
+  border-color: transparent; color: var(--text);
+  --text: var(--base-text); --muted: var(--base-muted); --faint: var(--base-faint); --line: var(--base-line); --accent: var(--base-accent);
+}
+section[data-rail] + .band { border-top-color: transparent; }
+
 /* ── Print: light, flat, no chrome — for reviewers who save the page as PDF ── */
 @media print {
   :root, :root[data-theme], :root:not([data-theme="light"]) {
@@ -454,7 +479,8 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
   }
   body { display: block; background: #fff; font-size: 11pt; }
   .site-nav, .rail-nav, .filters, .toolbar, .btn-row, .more, .paper-more, .theme .shot:has(video) { display: none !important; }
-  .intro, .page-head, .site-footer { background: #fff !important; }
+  .intro, .page-head, .site-footer, #teaching { background: #fff !important; }
+  section[data-rail] { background: #fff !important; --text: #000; --muted: #333; --faint: #555; --line: #d5dbe2; --accent: #1f3fae; }
   .band { padding-block: 1.25rem; }
   .intro-inner { grid-template-columns: 1fr 160px; padding-block: 0.5rem 1rem; }
   .portrait { max-width: 160px; order: 0; }
