@@ -3,7 +3,7 @@
    below so light and dark stay in step. */
 
 :root {
-  --ground: #f6f8fa;
+  --ground: #ffffff;
   --surface: #ffffff;
   --surface-2: #eef2f6;
   --thumb-bg: #ffffff;
@@ -112,7 +112,6 @@ h3 { font-size: 1.06rem; letter-spacing: -0.01em; line-height: 1.3; }
 .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2rem); }
 .band { padding-block: var(--space-section); }
 .band + .band { border-top: 1px solid var(--line); }
-.band.tinted { background: var(--surface); }
 .lede { color: var(--muted); font-size: 1.02rem; max-width: 64ch; }
 .lede strong { color: var(--text); font-weight: 500; }
 
@@ -213,10 +212,6 @@ h3 { font-size: 1.06rem; letter-spacing: -0.01em; line-height: 1.3; }
 /* ── Hero ── */
 .intro {
   border-bottom: 1px solid var(--line);
-  background:
-    radial-gradient(56rem 30rem at 8% -20%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 62%),
-    radial-gradient(40rem 26rem at 100% 10%, color-mix(in srgb, var(--accent) 6%, transparent), transparent 60%),
-    var(--surface);
 }
 .intro-inner {
   display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
@@ -316,9 +311,8 @@ a.chip:hover { border-color: var(--accent); color: var(--accent); }
 .badge.preprint { background: transparent; color: var(--faint); box-shadow: inset 0 0 0 1px var(--line); }
 .year { font-family: var(--font-mono); font-size: 0.7rem; color: var(--faint); font-variant-numeric: tabular-nums; }
 
-/* ── Teaching & background ── */
-.split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.1rem; }
-.sheet { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem 1.5rem 1.1rem; }
+/* ── CV & teaching: open blocks on the page, separated by rules ── */
+.split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem clamp(2rem, 5vw, 4rem); }
 .sheet > h3 {
   font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--accent); margin: 0 0 0.4rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--line);
@@ -344,21 +338,20 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
 .interests { list-style: none; display: flex; flex-wrap: wrap; gap: 0.3rem 0; margin: 0 0 1.6rem; padding: 0; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .interests li:not(:last-child)::after { content: "·"; margin-inline: 0.65rem; color: var(--accent); }
 .feature {
-  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.5rem 2.5rem; align-items: center;
-  background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent);
-  border-radius: var(--radius); padding: 1.6rem 1.75rem; box-shadow: var(--shadow);
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 1.5rem clamp(2rem, 5vw, 4rem); align-items: center;
+  border-block: 1px solid var(--line); padding-block: 1.6rem;
 }
 .feature-label { display: flex; align-items: center; gap: 0.75rem; margin: 0 0 0.7rem; }
 .feature h3 { font-size: 1.3rem; margin: 0 0 0.5rem; }
 .feature p { color: var(--muted); font-size: 0.94rem; margin: 0; }
 .feature .chips { margin: 0; padding-top: 0; border-top: 0; align-content: center; }
-.course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; margin-block: 1.1rem; }
-.course { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.35rem; display: flex; flex-direction: column; gap: 0.5rem; }
+.course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem clamp(2rem, 5vw, 4rem); padding-block: 1.6rem; border-bottom: 1px solid var(--line); margin-bottom: 2.5rem; }
+.course { display: flex; flex-direction: column; gap: 0.5rem; }
 .course .kind { white-space: normal; line-height: 1.5; }
 .course h3 { margin: 0; }
 .course p { color: var(--muted); font-size: 0.9rem; margin: 0; }
 .theses .rows em a { color: var(--accent); }
-.sheet.extras { margin-top: 1.1rem; padding-block: 0.3rem; }
+.sheet.extras { margin-top: 2.5rem; border-top: 1px solid var(--line); }
 .extras > div { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.35rem 1.5rem; align-items: baseline; padding-block: 0.85rem; }
 .extras > div + div { border-top: 1px solid var(--line); }
 .extras dt { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); }
@@ -369,9 +362,7 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
 @media (max-width: 600px) { .tools li { grid-template-columns: 1fr; padding-block: 0.25rem; } }
 
 /* ── Page header (inner pages) ── */
-.page-head { border-bottom: 1px solid var(--line); background:
-    radial-gradient(48rem 22rem at 6% -40%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 62%),
-    var(--surface); }
+.page-head { border-bottom: 1px solid var(--line); }
 .page-head .wrap { padding-block: clamp(2.25rem, 5vw, 3.75rem) clamp(1.75rem, 4vw, 2.5rem); }
 .page-head h1 { font-size: clamp(2rem, 1.3rem + 2.6vw, 3rem); font-weight: var(--display-weight-strong); letter-spacing: var(--display-tracking-tight); margin: 0 0 0.9rem; }
 .page-head h1 .dot { color: var(--accent); }
@@ -420,8 +411,7 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
 .pub .links a:hover { text-decoration: underline; }
 
 /* ── Footer ── */
-.site-footer { background: var(--surface); border-top: 1px solid var(--line); }
-.foot-rule { height: 2px; background: linear-gradient(90deg, var(--accent), transparent 70%); }
+.site-footer { border-top: 1px solid var(--line); }
 .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem 2rem; align-items: center; padding-block: 1.75rem; }
 .foot-grid p { margin: 0; font-size: 0.88rem; color: var(--muted); }
 .foot-grid p b { color: var(--text); font-weight: 600; }
@@ -463,8 +453,8 @@ ul.chips { list-style: none; margin: 0; padding-left: 0; }
     --shadow: none;
   }
   body { display: block; background: #fff; font-size: 11pt; }
-  .site-nav, .rail-nav, .filters, .toolbar, .btn-row, .foot-rule, .more, .paper-more, .theme .shot:has(video) { display: none !important; }
-  .intro, .page-head, .band.tinted, .site-footer { background: #fff !important; }
+  .site-nav, .rail-nav, .filters, .toolbar, .btn-row, .more, .paper-more, .theme .shot:has(video) { display: none !important; }
+  .intro, .page-head, .site-footer { background: #fff !important; }
   .band { padding-block: 1.25rem; }
   .intro-inner { grid-template-columns: 1fr 160px; padding-block: 0.5rem 1rem; }
   .portrait { max-width: 160px; order: 0; }
