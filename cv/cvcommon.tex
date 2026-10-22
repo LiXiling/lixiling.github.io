@@ -1,0 +1,34 @@
+% Logic shared by the CV variants: switches, \Todo, and publication filtering.
+% The design must define \TypesetPub, \PubGroupHeading and \Me.
+\RequirePackage{etoolbox}
+\RequirePackage{xcolor}
+\RequirePackage{needspace}
+
+\newif\ifacademic
+\newif\ifresume
+
+\definecolor{todo}{HTML}{D11F1F}
+\newcommand{\Todo}[1]{\textcolor{todo}{[#1]}}
+
+% \CVselectedpubs (profile.tex) -> etoolbox list
+\newcommand{\CVsellist}{}
+\AtBeginDocument{%
+  \edef\CVtmp{\noexpand\forcsvlist{\noexpand\listadd\noexpand\CVsellist}{\CVselectedpubs}}\CVtmp}
+
+% \PubList{group|selected}{heading}: typeset matching entries of pubs.tex.
+% The heading is printed only if at least one entry matches.
+\newcommand{\CVgroup}{}
+\newcommand{\CVheading}{}
+\newtoggle{CVheadingdone}
+\newcommand{\PubList}[2]{%
+  \renewcommand{\CVgroup}{#1}\renewcommand{\CVheading}{#2}\togglefalse{CVheadingdone}%
+  \input{pubs.tex}}
+\newcommand{\CVheadingonce}{%
+  \iftoggle{CVheadingdone}{}{\toggletrue{CVheadingdone}%
+    \ifdefempty{\CVheading}{}{\PubGroupHeading{\CVheading}}}}
+
+% \Pub{id}{group}{badge}{title}{authors}{venue}{year}{url}
+\newcommand{\Pub}[8]{%
+  \ifdefstring{\CVgroup}{selected}
+    {\ifinlist{#1}{\CVsellist}{\CVheadingonce\TypesetPub{#3}{#4}{#5}{#6}{#7}{#8}}{}}
+    {\ifdefstring{\CVgroup}{#2}{\CVheadingonce\TypesetPub{#3}{#4}{#5}{#6}{#7}{#8}}{}}}

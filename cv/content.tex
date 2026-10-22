@@ -1,0 +1,116 @@
+% CV body, shared by the résumé and the academic CV. Written with semantic
+% macros only; style-sheets.tex decides how they look.
+%
+%   \ifacademic ... \fi       full academic CV only
+%   \ifresume ... \fi         industry résumé only
+%   \Todo{...}                missing information, printed in red
+%
+% Publications come from pubs.tex (generated from the website).
+% Use real dashes (– —) rather than -- / ---.
+
+\MakeHeader
+
+\Summary{%
+  Robot learning researcher and PhD candidate at the Intuitive Robots Lab, Karlsruhe Institute of
+  Technology, advised by Rudolf Lioutikov. I build robot policies that extract more from the data they
+  already have, by grounding them in concepts like visual affordances and force. Papers at CoRL, CVPR,
+  ICRA, RSS and NeurIPS; reviewer for the major robot learning and machine learning venues.}
+
+\Section{Experience}
+
+\Entry{2022 – now}{PhD Researcher}{Intuitive Robots Lab, Karlsruhe Institute of Technology}{Karlsruhe, Germany}{%
+  \begin{Highlights}
+    \item Research on concept-aware robot policies for manipulation: grounding learned policies in visual
+      affordances, force and interpretable latent structures, such as HyperPG, probabilistic prototypes on
+      the hypersphere.
+    \item Papers at CoRL, CVPR, ICRA, RSS and NeurIPS, including datasets and benchmarks for robot vision
+      and bimanual manipulation; real-robot experiments on Franka Panda and Franka Research 3 Duo setups.
+    \ifresume
+    \item Teaching assistant for the Explainable AI lecture; co-teaches seminars and lab courses on
+      explainable AI, behavior foundation models and robot learning; supervises Bachelor's and Master's
+      theses, one published at ICRA 2025.
+    \fi
+  \end{Highlights}}
+
+\Entry{2025}{Intern, MLOps \& Robot VLA}{Poke \& Wiggle}{Munich, Germany}{%
+  \begin{Highlights}
+    \item Helped organize and host the Humanoid Manipulation \& AI Hackathon at the Deutsches Museum
+      Munich, together with TUM.
+    \item Implemented the hackathon's robot learning stack end to end: raw data processing, policy
+      training and deployment.
+  \end{Highlights}}
+
+\Entry{2013 – 2017}{Research Working Student}{SAP, Big Data Intelligence and Research}{}{}
+
+\Section{Education}
+
+\Entry{2018 – 2022}{M.Sc. Computer Science}{Karlsruhe Institute of Technology}{Karlsruhe, Germany}{%
+  \begin{Highlights}
+    \item Thesis: \emph{Imitation Learning for Versatile Robot Manipulation} (Autonomous Learning Robots Lab).
+      Research assistant at the Human-Centered Systems Lab and the Autonomous Learning Robots Lab.
+  \end{Highlights}}
+
+\Entry{2013 – 2018}{B.Sc. Computer Science}{TU Darmstadt}{Darmstadt, Germany}{%
+  \begin{Highlights}
+    \item Thesis: \emph{Development of a Content-Based Image Retrieval System via Deep Learning}
+      (Fraunhofer SIT). Exchange student at Tongji University, Shanghai.
+  \end{Highlights}}
+
+\ifresume
+  \Section{Selected Publications}
+  \PubList{selected}{}
+  \MorePubs
+\fi
+\ifacademic
+  \Section{Publications}
+  \PubList{conference}{Conference papers}
+  \PubList{journal}{Journal articles}
+  \PubList{workshop}{Workshop papers}
+  \PubList{preprint}{Preprints}
+\fi
+
+\Section{Talks \& Service}
+
+\ifresume
+\SkillRow{Talk}{\emph{Towards Concept-Aware Robot Policies}, Shanghai Research Institute for Intelligent
+  Autonomous Systems, Tongji University, Apr 2026}
+\else
+\Entry{Apr 2026}{Towards Concept-Aware Robot Policies}{Shanghai Research Institute for Intelligent Autonomous
+  Systems, Tongji University}{Shanghai, China}{}
+\fi
+\SkillRow{Reviewer}{CoRL, RSS, ICRA, NeurIPS, ICML, ICLR, CVPR, WACV, JMLR}
+
+\ifacademic
+\Section{Teaching}
+
+\Course{Explainable Artificial Intelligence}{Lecture \textperiodcentered{} Teaching assistant}{%
+  SS 2023 – SS 2026. Concepts and methods of explainable AI from the perspective of robot learning and
+  human–robot interaction.}
+\Course{Explainable Artificial Intelligence}{Seminar \& research project}{%
+  WS 23/24 – WS 25/26. Students study XAI methods for robot learning, then implement and evaluate them.}
+\Course{Behavior Foundation Models}{Seminar \& research practical course}{%
+  SS 2026. Students study and develop methods for robot learning with behavior foundation models, such
+  as VLAs.}
+\Course{Robot Learning}{Bachelor's lab course \& proseminar}{%
+  2024 – 2026. Introduction to PyTorch, MuJoCo benchmarks and the tools of robot learning research.}
+
+\Section{Thesis Supervision (Selected)}
+
+\Thesis{M.Sc.}{Force-Aware Robot Manipulation using Movement Primitives}{Paul Lödige}{published at ICRA 2025}
+\Thesis{M.Sc.}{Concept Motivated Prototypes: Learning Concept Representations with Probabilistic Prototypes}{Korbinian Rudolf}{}
+\fi
+
+\ifresume\Section{Skills \& Interests}\else\Section{Skills}\fi
+
+\SkillRow{Robot learning}{Python, PyTorch, LeRobot, starVLA, MuJoCo, Weights \& Biases}
+\SkillRow{Robotics \& infrastructure}{ROS~2, Docker, Franka Panda, Franka Research 3 Duo, WebXR}
+\SkillRow{Languages}{German (native), Chinese (bilingual), English (professional)}
+
+\ifresume
+\SkillRow{Interests}{Anything with a good story: books, video games, and running tabletop campaigns as a
+  Dungeons \& Dragons game master.}
+\else
+\Section{Outside the Lab}
+\Plain{Anything with a good story: books, video games, and running tabletop campaigns as a
+  Dungeons \& Dragons game master.}
+\fi

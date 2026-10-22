@@ -1,0 +1,79 @@
+% CV design, modelled on the SheetsResume.com template — one column, Garamond,
+% bold uppercase section heads with a rule, employer and dates on one line,
+% role and location in italics below, plain bullets. No summary paragraph,
+% following the template's own advice.
+\RequirePackage[a4paper, left=13mm, right=13mm, top=11mm, bottom=12mm]{geometry}
+\RequirePackage{fontspec}
+\RequirePackage{enumitem}
+\input{cvcommon}
+
+\setmainfont{EBGaramond}[Path=fonts/, Extension=.ttf, Ligatures=TeX, Numbers=Lining,
+  UprightFont=*-Regular, BoldFont=*-Bold, ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+
+\definecolor{linkblue}{HTML}{1F4E9E}
+\RequirePackage[hidelinks]{hyperref}
+\hypersetup{pdfauthor={Maximilian Xiling Li}, pdftitle={Maximilian Xiling Li --- CV},
+  pdfkeywords={robot learning, imitation learning, diffusion policies, vision-language-action models,
+    robot manipulation, visual affordances, movement primitives, explainable AI, PyTorch, LeRobot, ROS 2}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\pagestyle{empty}
+\frenchspacing
+\AtBeginDocument{\fontsize{10.3}{12.6}\selectfont}
+
+\newcommand{\Bar}{\hspace{0.45em}|\hspace{0.45em}}
+\newcommand{\MakeHeader}{%
+  {\fontsize{25}{28}\selectfont\bfseries \CVfirstname\ \CVlastname}\par
+  \vspace{1.2mm}
+  {\fontsize{11}{14}\selectfont
+    \href{mailto:\CVemail}{\CVemail}\Bar \CVlocation\Bar
+    \href{https://\CVweb}{\textcolor{linkblue}{\CVweb}}\Bar
+    \href{https://github.com/\CVgithub}{\textcolor{linkblue}{GitHub}}\Bar
+    \href{https://www.linkedin.com/in/\CVlinkedin}{\textcolor{linkblue}{LinkedIn}}\Bar
+    \href{https://scholar.google.com/citations?user=\CVscholar}{\textcolor{linkblue}{Google Scholar}}}\par
+  \vspace{1mm}\hrule height 0.6pt\vspace{2mm}}
+
+\newcommand{\Summary}[1]{}   % the template recommends leading with experience instead
+
+\newcommand{\Section}[1]{%
+  \par\needspace{6\baselineskip}\vspace{2.6mm}
+  {\fontsize{11.2}{13}\selectfont\bfseries\MakeUppercase{#1}}\par
+  \vspace{0.7mm}\hrule height 0.5pt\vspace{1.8mm}\nopagebreak}
+
+% \Entry{dates}{title}{organisation}{location}{details}
+\newcommand{\Entry}[5]{%
+  \par\noindent{\bfseries #3}\hfill{\bfseries #1}\par
+  \noindent\textit{#2}\hfill\textit{#4}\par
+  \ifblank{#5}{}{\vspace{0.3mm}#5}\par
+  \vspace{1.6mm}}
+
+\newenvironment{Highlights}
+  {\begin{itemize}[leftmargin=5mm, labelindent=0.3mm, labelwidth=4.7mm, labelsep=0pt, align=left,
+      itemsep=0.2mm, topsep=0pt, parsep=0pt, label=\textbullet]}
+  {\end{itemize}}
+
+% Bullet paragraph for publications, skills, teaching
+\newcommand{\BulletPar}[1]{%
+  \par\noindent\hangindent=5mm\hangafter=1\makebox[5mm][l]{\hspace{0.3mm}\textbullet}#1\par\vspace{0.6mm}}
+
+\newcommand{\Me}[1]{\textbf{#1}}
+\newcommand{\PubGroupHeading}[1]{\par\vspace{0.8mm}\textit{\textbf{#1}}\par\vspace{0.6mm}}
+% \TypesetPub{badge}{title}{authors}{venue}{year}{url}
+\newcommand{\TypesetPub}[6]{%
+  \ifresume
+    \BulletPar{\href{#6}{\textbf{#2}}. #3. \textit{%
+      \ifstrequal{#1}{Preprint}{arXiv preprint}{\ifstrequal{#1}{Workshop}{#4}{#1}} #5}.}%
+  \else
+    \BulletPar{\textbf{#2}. #3. \textit{#4}%
+      \ifstrequal{#1}{Preprint}{}{\ifstrequal{#1}{Workshop}{}{ (#1)}}, #5.
+      \href{#6}{\textcolor{linkblue}{[link]}}}%
+  \fi}
+\newcommand{\MorePubs}{%
+  \par\vspace{0.4mm}Full list: \href{https://\CVweb/publications.html}{\textcolor{linkblue}{\CVweb/publications}}\Bar
+  \href{https://scholar.google.com/citations?user=\CVscholar}{\textcolor{linkblue}{Google Scholar}}\par}
+
+\newcommand{\Course}[3]{\BulletPar{\textbf{#1}, \textit{#2}. #3}}
+\newcommand{\Thesis}[4]{\BulletPar{\textit{#2}, #3 (#1)\ifblank{#4}{}{, #4}.}}
+\newcommand{\SkillRow}[2]{\BulletPar{\textbf{#1:} #2}}
+\newcommand{\Plain}[1]{\BulletPar{#1}}
