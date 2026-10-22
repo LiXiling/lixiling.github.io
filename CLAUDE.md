@@ -84,9 +84,9 @@ Text colors meet WCAG AA on every surface; check contrast when changing tokens. 
 
 LaTeX CV in the style of the SheetsResume.com template (one column, EB Garamond from `cv/fonts/`, OFL),
 built from one source into two PDFs (`make` in `cv/`, output in `cv/build/`, git-ignored).
-`make publish` copies them to `cv/Maximilian_Xiling_Li_CV.pdf` and `cv/Maximilian_Xiling_Li_Academic_CV.pdf`,
-which are committed and linked from the website's download buttons — rerun it after any CV or
-publication change so the PDFs don't go stale. Variants:
+`make publish` copies the one-page CV to `cv/Maximilian_Xiling_Li_CV.pdf`, which is committed and
+linked from the website (opens in a new tab) — rerun it after any CV or publication change so it
+doesn't go stale. The academic CV is built but not published; use it for academic applications. Variants:
 `resume-sheets` — one-page industry résumé (compact paper entries, no summary) and `cv-sheets` — full
 academic CV (all papers, teaching, supervision).
 
@@ -104,6 +104,6 @@ academic CV (all papers, teaching, supervision).
 ## Deployment
 
 Push to `main` — GitHub Actions deploys. The workflow assembles `_site/` from the repo minus `cv/`
-sources, `CLAUDE.md` and git files, then adds the two CV PDFs; new top-level site files are included
+sources, `CLAUDE.md` and git files, then adds the CV PDF; new top-level site files are included
 automatically.
 Requires GitHub Pages enabled in repo settings with source set to **GitHub Actions**.

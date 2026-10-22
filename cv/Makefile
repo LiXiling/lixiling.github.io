@@ -1,5 +1,5 @@
-# Builds the CV into build/ and, with `make publish`, copies the PDFs the
-# website links to into this folder. Requires TeX Live (xelatex, latexmk).
+# Builds both CV variants into build/. `make publish` copies the one-page CV
+# the website links to into this folder; the academic CV stays in build/. Requires TeX Live (xelatex, latexmk).
 VARIANTS := resume-sheets cv-sheets
 
 all: $(VARIANTS:%=build/%.pdf)
@@ -11,10 +11,9 @@ pubs.tex: ../publications.html gen_pubs.py
 build/%.pdf: %.tex pubs.tex profile.tex content.tex cvcommon.tex style-sheets.tex
 	latexmk -xelatex -interaction=nonstopmode -halt-on-error -outdir=build $<
 
-# The committed, downloadable PDFs. Run after any CV or publication change.
+# The committed, linked PDF. Run after any CV or publication change.
 publish: all
 	cp build/resume-sheets.pdf Maximilian_Xiling_Li_CV.pdf
-	cp build/cv-sheets.pdf Maximilian_Xiling_Li_Academic_CV.pdf
 
 clean:
 	rm -rf build pubs.tex
