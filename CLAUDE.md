@@ -14,7 +14,7 @@ Fonts: Instrument Sans (headings, name, tagline via `--font-display`), Inter (te
 
 ## Version Control
 
-This repo uses **Jujutsu (`jj`)** as the primary VCS on top of git. Prefer `jj` commands over raw `git` commands (e.g., `jj status`, `jj log`, `jj commit`).
+Plain git. (Jujutsu was used earlier; this checkout has no `.jj`. `jj git init` would colocate it again.)
 
 ## Development
 
@@ -107,6 +107,7 @@ academic CV (all papers, teaching, supervision).
   This machine lacks `texlive-xetex`, so the system xelatex format is stale; install it, or build a
   format with `xetex -ini -etex -jobname=xelatex -progname=xelatex '*xelatex.ini'` and pass its
   directory via `TEXFORMATS=<dir>: make`.
+  This works (2026-11-24): build the format into any directory, then `TEXFORMATS=<dir>: make publish`.
 
 ## Deployment
 
