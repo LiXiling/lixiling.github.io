@@ -62,8 +62,8 @@
 % \TypesetPub{badge}{title}{authors}{venue}{year}{url}
 \newcommand{\TypesetPub}[6]{%
   \ifresume
-    \BulletPar{\href{#6}{\textbf{#2}}. #3. \textit{%
-      \ifstrequal{#1}{Preprint}{arXiv preprint}{\ifstrequal{#1}{Workshop}{#4}{#1}} #5}.}%
+    \BulletPar{\href{#6}{\textbf{#2}}\\ {\small #3. \textit{%
+      \ifstrequal{#1}{Preprint}{arXiv preprint}{\ifstrequal{#1}{Workshop}{#4}{#1}} #5}.}}%
   \else
     \BulletPar{\textbf{#2}. #3. \textit{#4}%
       \ifstrequal{#1}{Preprint}{}{\ifstrequal{#1}{Workshop}{}{ (#1)}}, #5.
