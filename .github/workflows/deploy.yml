@@ -34,8 +34,10 @@ jobs:
           mkdir -p _site/cv
           cp cv/*.pdf _site/cv/
 
+      # v3 as in GitHub's Pages starter workflow: deploy-pages@v5 lists artifacts with
+      # @actions/artifact 2.x and did not find the ones upload-pages-artifact@v5 (artifact 6.x) stored.
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
 
