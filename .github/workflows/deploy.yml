@@ -14,11 +14,10 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+# Upload and deploy run as separate jobs: deploy-pages lists the run's artifacts, and an
+# artifact uploaded earlier in the same job was not yet listed (all deploys on 2026-11-25).
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -34,13 +33,18 @@ jobs:
           mkdir -p _site/cv
           cp cv/*.pdf _site/cv/
 
-      # v3 as in GitHub's Pages starter workflow: deploy-pages@v5 lists artifacts with
-      # @actions/artifact 2.x and did not find the ones upload-pages-artifact@v5 (artifact 6.x) stored.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
